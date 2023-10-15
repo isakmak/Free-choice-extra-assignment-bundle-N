@@ -6,7 +6,7 @@ FROM vm/ubuntu:18.04
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash && \
     apt install nodejs && \
     rm -f /etc/apt/sources.list.d/nodesource.list
-RUN npm install -g http-server
+RUN npm install npm@latest -g
 
 COPY . .
 RUN echo 'hello' > hello.html

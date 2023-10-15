@@ -2,11 +2,7 @@
 FROM vm/ubuntu:18.04
 # To note: Layerfiles create VMs, *not* containers!
 
-# Install node
-RUN curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-RUN sudo apt-get install -y nodejs
-RUN sudo npm install npm@latest -g
-
+# Install node-
 RUN sudo apt-get update && sudo apt-get install -y ca-certificates curl gnupg
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 RUN NODE_MAJOR=20

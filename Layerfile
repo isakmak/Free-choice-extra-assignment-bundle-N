@@ -10,6 +10,6 @@ RUN npm install -g http-server
 
 COPY . .
 RUN echo 'hello' > hello.html
-
+RUN npm install
 RUN BACKGROUND node app.js
 EXPOSE WEBSITE http://localhost:3000

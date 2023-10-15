@@ -1,8 +1,8 @@
 FROM vm/ubuntu:18.04
 
-RUN $ curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-RUN sudo apt-get install -y nodejs
-RUN sudo npm install npm@latest -g
+RUN sudo apt update
+RUN sudo apt install -y nodejs
+RUN sudo apt install npm
 
 
 COPY . .
